@@ -1,0 +1,36 @@
+import { Component } from '@angular/core';
+import { CustomerService } from 'src/app/service/customer.service';
+
+@Component({
+  selector: 'app-get-all-customers',
+  templateUrl: './get-all-customers.component.html',
+  styleUrls: ['./get-all-customers.component.css']
+})
+export class GetAllCustomersComponent {
+
+  customers: any = [];
+
+  constructor(private customerService: CustomerService) { }
+
+  userName : string | null = '';
+
+  ngOnInit() {
+    this.userName  = localStorage.getItem('userName');
+    this.getALlCustomers();
+  }
+
+  getALlCustomers() {
+    this.customerService.getAllCustomer().subscribe((res) => {
+      console.log(res);
+      this.customers = res;
+    })
+  }
+
+  deleteCustomer(id: number) {
+    this.customerService.deleteCustomer(id).subscribe((res) => {
+      console.log(res);
+      this.getALlCustomers();
+    })
+  }
+
+}

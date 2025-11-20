@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th>Type</th>
+            <th>Mileage</th>
+            <th>Owner Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.name}}</td>
+            <td>{{vehicle.description}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.mileage}}</td>
+            <td><button class="btn-update" routerLink="/customer/{{vehicle.customerId}}">View</button></td>
+        </tr>
+    </tbody>
+</table>

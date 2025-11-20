@@ -1,0 +1,26 @@
+<button class="btn-new" routerLink="/customer">Save New Customer</button>
+<h2>Welcome, {{ userName }} </h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.phone}}</td>
+            <td>
+                <button class="btn-update" routerLink="/customer/{{customer.id}}">Update</button>
+                <button class="btn-delete" (click)="deleteCustomer(customer.id)">Delete</button>
+                <button class="btn-delete" routerLink="/vehicle/{{customer.id}}">Add Vehicle</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn-new" routerLink="/vehicleDetails">Vehicle Details</button>

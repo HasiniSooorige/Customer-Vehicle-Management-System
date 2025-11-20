@@ -1,0 +1,37 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { PostCustomerComponent } from './components/post-customer/post-customer.component';
+import { GetAllCustomersComponent } from './components/get-all-customers/get-all-customers.component';
+import { UpdateCustomerComponent } from './components/update-customer/update-customer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { UserRegisterComponent } from './components/user-register/user-register.component';
+import { LoginComponent } from './components/login/login.component';
+import { VehicleComponent } from './components/vehicle/vehicle.component';
+import { VehicleDetailsComponent } from './components/vehicle-details/vehicle-details.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    PostCustomerComponent,
+    GetAllCustomersComponent,
+    UpdateCustomerComponent,
+    UserRegisterComponent,
+    LoginComponent,
+    VehicleComponent,
+    VehicleDetailsComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

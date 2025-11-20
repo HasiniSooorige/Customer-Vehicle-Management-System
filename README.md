@@ -38,4 +38,9 @@ Backend
 Database
 -MySQL
 
-
+🧪 Future Enhancements 
+-JWT Authentication
+-Vehicle service tracking
+-Invoice / billing module
+-Image upload for customers or vehicles
+-Dashboard with charts

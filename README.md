@@ -39,6 +39,3 @@ Database
 -MySQL
 
 
-
-📁 Project Structure
-Fron
